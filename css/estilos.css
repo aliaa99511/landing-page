@@ -1,0 +1,196 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+body { font-family: 'Lato', sans-serif;font-size: 18px;}
+
+h1, h2, h3, h4, h5, h6 {text-align: center;margin-bottom: 0;}
+
+.texto-naranja {font-weight: 300;color: orange;}
+
+.texto-blanco {font-weight: 700;color: #fff;}
+
+.texto-negro {color: #000;}
+
+/**************************************************/
+
+
+
+/***nav**/
+#fp-nav ul li a span {background: orange}
+
+#fp-nav ul li .fp-tooltip{color: orange}
+
+.nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 70;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+}
+.nav li,
+.nav a{
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald',sans-serif;
+    font-size: 19px;
+    color: #fff;
+    transition: .5s ease;
+    letter-spacing: 2px;
+
+}
+.nav li.active{
+   border-bottom: 2px solid orange!important;
+}
+.menu li a{
+    transition: .5s ease;
+    margin: 0;
+    padding: 0;
+}
+.menu li.active a,
+.menu li:hover a{
+    color:  orange;
+}
+/***nav**/
+/***********************************************/
+
+
+/****************************************/
+/**home and about pages**/
+
+/*
+.section-1{
+    background: url(../images/bg-imagen.jpeg);
+    background-position: center;
+}*/
+.headertext{text-align: center;position: relative;z-index: 99;}
+
+.title{font-size: 70px;text-transform: uppercase}
+
+.myicon{
+    position: absolute;
+    z-index: 99;
+    bottom: 3%;
+    left: 50%;
+    font-size: 40px;
+    animation: updown 1s ease infinite;
+}
+@keyframes updown{
+    0% {transform: translateY(20px);}
+    25% {transform: translateY(0);}
+    100% {transform: translateY(20px);}
+}
+
+.bg-video{
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background: #000;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+/**home and about pages**/
+/************************************************/
+
+
+
+/***********************************************/
+/*slider*/
+.productos article{
+    background-position: center;
+    background-size: cover;
+}
+.productos article:nth-child(1){
+    background-image: url('../images/producto-02.jpg');
+}
+.productos article:nth-child(2){
+    background-image: url('../images/producto-01.jpg');
+}
+.productos article:nth-child(3){
+    background-image: url('../images/producto-03.jpg');
+}
+.productos .content{margin: 0 100px}
+
+.productos .modelo{font-size: 45px}
+
+.productos .descripcion{font-size: 22px}
+
+.productos .precio{font-size: 25px}
+
+.fp-controlArrow.fp-next {right: 50px}
+
+.productos .content::before{
+    content: " ";
+    height: 50px;
+    width: 2px;
+    display: inline-block;
+    background: orange;
+    position: absolute;
+    top: 50%;
+    margin: -10px;
+}
+.productos .precio::before{content: "$";display: inline-block}
+/*slider*/
+/*****************************************/
+
+
+
+/**********************************************/
+/**footer**/
+footer{
+    background-color: #000;
+}
+footer .texto-naranja{
+    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+footer h2{font-family: 'Oswald' sans-serif}
+
+footer .social{
+    display: flex;
+     justify-content: center;
+     margin: 0;
+     font-size: 50px;
+}
+footer .social a {
+    display: flex;
+    width: 85px;
+    height: 80px;
+    background: #fff;
+    color: #30313A;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin: 0 20px;
+    font-size: 48px;
+    transition: all .3s ease-in-out;
+}
+footer .facebook:hover {background: #3b5998;}
+footer .twitter:hover {background: #1da1f2;}
+footer .instagram:hover {background: #c13584;}
+
+footer .facebook i{color: #3b5998;}
+footer .twitter i{color: #1da1f2;}
+footer .instagram i{color: #c13584;}
+
+footer .facebook:hover i{color: white;}
+footer .twitter:hover i{color: white;}
+footer .instagram:hover i{color: white;}
